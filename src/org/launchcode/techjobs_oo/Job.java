@@ -51,7 +51,7 @@ public class Job {
     //  and id.
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getName() {
