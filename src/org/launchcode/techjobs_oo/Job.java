@@ -56,44 +56,44 @@ public class Job {
         String line6 = "\nCore Competency: ";
 
         //If all fields other than id are null, return empty fields
-        if(this.name == null && this.employer == null && this.location == null &&
-                this.positionType == null && this.coreCompetency == null){
+        if(name == null && employer == null && location == null &&
+                positionType == null && coreCompetency == null){
 
             return(line1 + line2 + line3 + line4 + line5 + line6 + "\n");
 
-        }else { //if the field is not empty or null, add to appropriate line
+        }else{ //if the field is not empty or null, add to appropriate line
                     //else, if the field is empty, add "Data not available" string to appropriate line
-            if(this.name != null && this.name != ""){
-                line1 += this.id;
-                line2 += this.name;
+            if(name != null && name != ""){
+                line1 += id;
+                line2 += name;
             }else {
-                line1 += this.id;
+                line1 += id;
                 line2 += "Data not available";
             }
-            if(this.employer.getValue() != null && this.employer.getValue() != ""){
-                line3 += this.employer.getValue();
+            if(employer.getValue() != null && employer.getValue() != ""){
+                line3 += employer.getValue();
             }else{
                 line3 += "Data not available";
             }
-            if(this.location.getValue() != null && this.location.getValue() != ""){
-                line4 += this.location.getValue();
+            if(location.getValue() != null && location.getValue() != ""){
+                line4 += location.getValue();
             }else{
                 line4 += "Data not available";
             }
-            if(this.positionType.getValue() != null && this.positionType.getValue() != ""){
-                line5 += this.positionType.getValue();
+            if(positionType.getValue() != null && positionType.getValue() != ""){
+                line5 += positionType.getValue();
             }else{
                 line5 += "Data not available";
             }
-            if(this.coreCompetency.getValue() != null && this.coreCompetency.getValue() != ""){
-                line6 += this.coreCompetency.getValue();
+            if(coreCompetency.getValue() != null && coreCompetency.getValue() != ""){
+                line6 += coreCompetency.getValue();
             }else{
                 line6 += "Data not available";
             }
             return (line1 + line2 + line3 + line4 + line5 + line6 + "\n");
         }
 
-        }
+    }
 
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID

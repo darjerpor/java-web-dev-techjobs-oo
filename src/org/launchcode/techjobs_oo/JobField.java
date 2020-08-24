@@ -11,7 +11,6 @@ public abstract class JobField {
         id = nextId;
         nextId++;
     }
-
     JobField(String value){
         this();
         this.value = value;
