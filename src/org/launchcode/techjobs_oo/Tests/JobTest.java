@@ -11,7 +11,7 @@ import org.launchcode.techjobs_oo.*;
 
 public class JobTest {
 
-    public static Job job1,job2,job3,job4,job5;
+    public static Job job1,job2,job3,job4,job5,job6,job7;
 
     @BeforeClass
     public static void makeJobInstances(){
@@ -33,6 +33,16 @@ public class JobTest {
                 new Location("Bikini Bottom"),
                 new PositionType("Food Preparation"),
                 new CoreCompetency("Patty Flipping"));
+        job6 = new Job("Frycook",
+                new Employer("Krusty Krab"),
+                new Location(null),
+                new PositionType(null),
+                new CoreCompetency("Patty Flipping"));
+        job7 = new Job("Frycook",
+                new Employer("Krusty Krab"),
+                new Location(null),
+                new PositionType(null),
+                new CoreCompetency(null));
     }
 
     @Test
@@ -77,5 +87,23 @@ public class JobTest {
                         + "\nPosition Type: " + job5.getPositionType().getValue()
                         + "\nCore Competency: " + job5.getCoreCompetency().getValue())
                 ,job5.toString());
+    }
+
+    @Test
+    public void testEmptyFieldsLeaveMessageToString() {
+        assertEquals(("ID: " + job6.getId()
+                        + "\nName: " + job6.getName()
+                        + "\nEmployer: " + job6.getEmployer().getValue()
+                        + "\nLocation: " + "Data not available"
+                        + "\nPosition Type: " + "Data not available"
+                        + "\nCore Competency: " + job6.getCoreCompetency().getValue())
+                ,job6.toString());
+        assertEquals(("ID: " + job7.getId()
+                        + "\nName: " + job7.getName()
+                        + "\nEmployer: " + job7.getEmployer().getValue()
+                        + "\nLocation: " + "Data not available"
+                        + "\nPosition Type: " + "Data not available"
+                        + "\nCore Competency: " + "Data not available")
+                , job7.toString());
     }
 }

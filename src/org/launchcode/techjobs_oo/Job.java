@@ -55,35 +55,37 @@ public class Job {
         String line5 = "\nPosition Type: ";
         String line6 = "\nCore Competency: ";
 
+        //If all fields other than id are null, return empty fields
         if(this.name == null && this.employer == null && this.location == null &&
                 this.positionType == null && this.coreCompetency == null){
 
             return(line1 + line2 + line3 + line4 + line5 + line6);
 
-        }else{
-            if(this.name != null){
+        }else { //if the field is not empty or null, add to appropriate line
+                    //else, if the field is empty, add "Data not available" string to appropriate line
+            if(this.name != null && this.name != ""){
                 line1 += this.id;
                 line2 += this.name;
-            }else{
+            }else {
                 line1 += this.id;
                 line2 += "Data not available";
             }
-            if(this.employer != null){
+            if(this.employer.getValue() != null && this.employer.getValue() != ""){
                 line3 += this.employer.getValue();
             }else{
                 line3 += "Data not available";
             }
-            if(this.location != null){
+            if(this.location.getValue() != null && this.location.getValue() != ""){
                 line4 += this.location.getValue();
             }else{
                 line4 += "Data not available";
             }
-            if(this.positionType != null){
+            if(this.positionType.getValue() != null && this.positionType.getValue() != ""){
                 line5 += this.positionType.getValue();
             }else{
                 line5 += "Data not available";
             }
-            if(this.coreCompetency != null){
+            if(this.coreCompetency.getValue() != null && this.coreCompetency.getValue() != ""){
                 line6 += this.coreCompetency.getValue();
             }else{
                 line6 += "Data not available";
