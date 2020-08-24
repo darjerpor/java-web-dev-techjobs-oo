@@ -73,7 +73,7 @@ public class JobTest {
                 + "\nEmployer: "
                 + "\nLocation: "
                 + "\nPosition Type: "
-                + "\nCore Competency: ")
+                + "\nCore Competency: " +"\n")
                 ,job1.toString());
 
     }
@@ -85,7 +85,7 @@ public class JobTest {
                         + "\nEmployer: " + job5.getEmployer().getValue()
                         + "\nLocation: " + job5.getLocation().getValue()
                         + "\nPosition Type: " + job5.getPositionType().getValue()
-                        + "\nCore Competency: " + job5.getCoreCompetency().getValue())
+                        + "\nCore Competency: " + job5.getCoreCompetency().getValue() + "\n")
                 ,job5.toString());
     }
 
@@ -96,14 +96,14 @@ public class JobTest {
                         + "\nEmployer: " + job6.getEmployer().getValue()
                         + "\nLocation: " + "Data not available"
                         + "\nPosition Type: " + "Data not available"
-                        + "\nCore Competency: " + job6.getCoreCompetency().getValue())
+                        + "\nCore Competency: " + job6.getCoreCompetency().getValue() + "\n")
                 ,job6.toString());
         assertEquals(("ID: " + job7.getId()
                         + "\nName: " + job7.getName()
                         + "\nEmployer: " + job7.getEmployer().getValue()
                         + "\nLocation: " + "Data not available"
                         + "\nPosition Type: " + "Data not available"
-                        + "\nCore Competency: " + "Data not available")
+                        + "\nCore Competency: " + "Data not available" + "\n")
                 , job7.toString());
     }
 }

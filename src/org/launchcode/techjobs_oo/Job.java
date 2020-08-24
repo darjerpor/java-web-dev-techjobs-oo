@@ -59,7 +59,7 @@ public class Job {
         if(this.name == null && this.employer == null && this.location == null &&
                 this.positionType == null && this.coreCompetency == null){
 
-            return(line1 + line2 + line3 + line4 + line5 + line6);
+            return(line1 + line2 + line3 + line4 + line5 + line6 + "\n");
 
         }else { //if the field is not empty or null, add to appropriate line
                     //else, if the field is empty, add "Data not available" string to appropriate line
@@ -90,7 +90,7 @@ public class Job {
             }else{
                 line6 += "Data not available";
             }
-            return (line1 + line2 + line3 + line4 + line5 + line6);
+            return (line1 + line2 + line3 + line4 + line5 + line6 + "\n");
         }
 
         }
