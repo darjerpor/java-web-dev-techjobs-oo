@@ -55,4 +55,27 @@ public class JobTest {
     public void testJobsForEquality(){
         assertFalse(job4.equals(job5));
     }
+
+    @Test
+    public void testEmptyJobObjectToString(){
+        assertEquals(("ID: "
+                + "\nName: "
+                + "\nEmployer: "
+                + "\nLocation: "
+                + "\nPosition Type: "
+                + "\nCore Competency: ")
+                ,job1.toString());
+
+    }
+
+    @Test
+    public void testAllFieldsFullToString(){
+        assertEquals(("ID: " + job5.getId()
+                        + "\nName: " + job5.getName()
+                        + "\nEmployer: " + job5.getEmployer().getValue()
+                        + "\nLocation: " + job5.getLocation().getValue()
+                        + "\nPosition Type: " + job5.getPositionType().getValue()
+                        + "\nCore Competency: " + job5.getCoreCompetency().getValue())
+                ,job5.toString());
+    }
 }
